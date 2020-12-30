@@ -47,6 +47,9 @@ window.addEventListener('load', function () {
     document.getElementById("password").value = randoSequence(password).join("");
   
   }
+function refresh() {
+  window.location.reload("Refresh")
+}
   
   // ************************ function here *********************************
   // write a function called generatePassword which will have a series of prompts for user input

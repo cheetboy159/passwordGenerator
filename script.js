@@ -5,18 +5,18 @@
 
   var generateBtn = document.querySelector("#generate");
 
-  var length = Number(prompt("How many characters would you like your password to be?"));
-  while (isNaN(length) || length < 8 || length > 128) length = Number(prompt("Length must be 8-128 characters. How many characters would you like your password to be?"));
+  var pwLength = Number(prompt("How many characters would you like your password to be?"));
+  while (isNaN(pwLength) || pwLength < 8 || pwLength > 128) pwLength = Number(prompt("Length must be 8-128 characters. How many characters would you like your password to be?"));
 
-  var uppers = confirm("Would you like to use uppercase letters?");
-  var lowers = confirm("Would you like to use lowercase letters?");
+  var capLetter = confirm("Would you like to use uppercase letters?");
+  var lowLetter = confirm("Would you like to use lowercase letters?");
   var numbers = confirm("Would you like to use numbers?");
   var symbols = confirm("Would you like to use special characters?");
 
-  while (!uppers && !lowers && !numbers && !symbols) {
+  while (!capLetter && !lowLetter && !numbers && !symbols) {
     alert("You must select at least one character type!");
-    uppers = confirm("Would you like to use uppercase letters?");
-    lowers = confirm("Would you like to use lowercase letters?");
+    capLetter = confirm("Would you like to use uppercase letters?");
+    lowLetter = confirm("Would you like to use lowercase letters?");
     numbers = confirm("Would you like to use numbers?");
     symbols = confirm("Would you like to use special characters?");
   }
@@ -35,13 +35,13 @@ window.addEventListener('load', function () {
     var password = "";
     var passwordText = document.querySelector("#password");
   
-    var allowed = {};
-    if (uppers) password += rando(allowed.uppers = "QWERTYUIOPASDFGHJKLZXCVBNM");
-    if (lowers) password += rando(allowed.lowers = "qwertyuiopasdfghjklzxcvbnm");
-    if (numbers) password += rando(allowed.numbers = "1234567890");
-    if (symbols) password += rando(allowed.symbols = "!@#$%^&*(){}[]=<>/,.");
+    var charSelected = {};
+    if (capLetter) password += rando(charSelected.capLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    if (lowLetter) password += rando(charSelected.lowLetter = "abcdefghijklmnopqrstuvwxyz");
+    if (numbers) password += rando(charSelected.numbers = "1234567890");
+    if (symbols) password += rando(charSelected.symbols = "!@#$%^&*(){}[]=<>/,.");
 
-    for (var i = password.length; i < length; i++) password += rando(rando(allowed).value);
+    for (var i = password.length; i < pwLength; i++) password += rando(rando(charSelected).value);
     passwordText.value = password;
 
     document.getElementById("password").value = randoSequence(password).join("");

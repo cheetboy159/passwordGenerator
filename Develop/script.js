@@ -80,5 +80,4 @@ window.addEventListener('load', function () {
   // ************************ function ends here *********************************
   
   // Add event listener to generate button
-  generateBtn.addEventListener("click", writePassword);
-  
+ 

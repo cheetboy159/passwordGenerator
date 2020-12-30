@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
+    
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <script src="https://randojs.com/1.0.0.js"></script>
     <div class="wrapper">
       <header>
         <h1>Password Generator</h1>
@@ -19,13 +21,14 @@
         <div class="card-body">
           <textarea
             readonly
+            type="text"
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <button id="generate" onclick="writePassword()" class="btn">Generate Password</button>
         </div>
       </div>
     </div>

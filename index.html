@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <script src="https://randojs.com/1.0.0.js"></script>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            type="text"
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" onclick="writePassword()" class="btn">Generate Password</button>
-          <button id="reset" onclick="refresh()" class="btn">Reset Criteria</button>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <div class="card">
+      <div class="card-header">
+        <h2>Generate a Password</h2>
+      </div>
+      <div class="card-body">
+        <textarea readonly type="text" id="password" placeholder="Your Secure Password"
+          aria-label="Generated Password"></textarea>
+      </div>
+      <div class="card-footer">
+        <button id="generate" onclick="writePassword()" class="btn">Generate Password</button>
+        <button id="reset" onclick="refresh()" class="btn">Reset Criteria</button>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+
+</body>
+<script src="script.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+
 </html>

@@ -3,7 +3,7 @@
   // need a button or link to get a new password
   // need to show the password on the page
 
-  var generateBtn = document.querySelector("#generate");
+  // var generateBtn = document.querySelector("#generate");
 
   var pwLength = Number(prompt("How many characters would you like your password to be?"));
   while (isNaN(pwLength) || pwLength < 8 || pwLength > 128) pwLength = Number(prompt("Length must be 8-128 characters. How many characters would you like your password to be?"));
